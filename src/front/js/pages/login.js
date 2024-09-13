@@ -33,7 +33,7 @@ export const Login = () => {
         try {
             const result = await actions.loginUser(dataForm);
     
-            if (result.success && result.user) {
+            if (result) {
                 console.log('Inicio de sesión exitoso, redirigiendo...');
                 navigate('/vistaPrivada'); ////AQUI CAMBIA A LA PAGINA PRIVADA
             } else {

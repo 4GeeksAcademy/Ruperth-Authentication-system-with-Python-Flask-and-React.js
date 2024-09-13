@@ -1,10 +1,17 @@
 // src/pages/vistaPrivada.js
-import React, { useContext } from "react";
-import { Navigate } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
 const VistaPrivada = () => {
+    const navigate=useNavigate()
+    useEffect (()=>{
+        const token=localStorage.getItem("token")
+        if ( !token ){
+            navigate("/login")
+        }
+    }, [] )
     return (
         <div>
             <h1>Página Privada</h1>
@@ -12,6 +19,8 @@ const VistaPrivada = () => {
         </div>
     );
 };
+
+
 
 
 export default VistaPrivada;
