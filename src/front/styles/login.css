@@ -1,0 +1,73 @@
+.divPrincipalLogin {
+    background-color: aliceblue;
+    width: 600px;
+    height: 420px;
+    border-radius: 3%; /* Esquinas redondeadas */
+    border: 4px solid #000; /* Línea de borde de 4 píxeles de grosor, color negro */
+
+
+    justify-content: center;
+
+    margin: auto; /* Centrado horizontal */
+    margin-top: 48px;
+}
+
+/* Para centrar el contenedor que rodea al div */
+.centerContainer {
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    
+}
+
+
+.contenedor-password {
+    position: relative;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.contenedor-password input {
+    width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+    padding-right: 40px; /* Espacio suficiente para el ícono a la derecha */
+    box-sizing: border-box; /* Incluye el padding dentro del ancho */
+}
+
+.contenedor-password .icon {
+    position: absolute;
+    right: 10px; /* Espacio entre el borde derecho del input y el ícono */
+    top: 50%;
+    transform: translateY(-50%); /* Centra el ícono verticalmente */
+    cursor: pointer;
+    color: #888; /* Color del ícono */
+    font-size: 18px; /* Ajusta el tamaño del ícono */
+}
+
+#email2 {
+    width: 236px;
+    margin-bottom: 15px;
+}
+
+
+/* Estilos personalizados para el botón */
+.btn-custom {
+    background-color: black; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Añade espacio dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+/* Cambia el color cuando el cursor está sobre el botón */
+.btn-custom:hover {
+    background-color: #ff1111; /* Cambia el color de fondo al pasar el cursor */
+    color: #fff; /* Cambia el color del texto al pasar el cursor */
+}
+
+#button4{
+
+    color: black;
+    background-color:  rgb(189, 154, 206);
+    
+    margin-right: 10px;
+}

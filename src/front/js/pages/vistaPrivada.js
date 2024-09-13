@@ -2,7 +2,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
-
+import "../../styles/vistaPrivada.css"; // Asegúrate de tener este archivo CSS
 
 const VistaPrivada = () => {
     const navigate=useNavigate()
@@ -13,7 +13,7 @@ const VistaPrivada = () => {
         }
     }, [] )
     return (
-        <div>
+        <div className="mainPage1">
             <h1>Página Privada</h1>
             {/* pagina privada */}
         </div>

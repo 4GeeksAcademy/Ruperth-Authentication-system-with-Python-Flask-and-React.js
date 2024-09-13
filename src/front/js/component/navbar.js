@@ -1,20 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
-
+import "../../styles/navbar.css"; // Asegúrate de tener este archivo CSS
 
 export const Navbar = () => {
     const { store, actions } = useContext(Context);
-    
-
     const [logueado, setLogueado] = useState(localStorage.getItem('token')); 
     const [usuarioImage, setUsuarioImage] = useState(localStorage.getItem('usuarioImage')); 
-    
+
     useEffect(() => {
-       
+        // Actualiza el estado cuando cambie el token o la imagen del usuario
         setLogueado(localStorage.getItem('token'));
         setUsuarioImage(localStorage.getItem('usuarioImage'));
-    }, []); 
+    }, [localStorage.getItem('token'), localStorage.getItem('usuarioImage')]); 
 
     const navigate = useNavigate();
 
@@ -27,23 +25,22 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="navbar mb-0">
-            <div className="text-overlay-navbar">Authentication System</div>
+        <nav className="navbar mb-0" id="navbar1">
+            <div className="text-overlay-navbar" id="title">
+                <h3>Authentication System</h3></div>
             {logueado ? ( 
+                <div className="navbar-buttons"id="button3">
+
+                    <button onClick={handleLogout} className="btn btn-secondary" id="button3">
+                        Cerrar sesión
+                    </button>
+                </div>
+            ) : ( 
                 <div className="navbar-buttons">
-                <Link to="/login" className="btn btn-secondary">
-                    Iniciar sesión
-                </Link>
-                <Link to="/signUp" className="btn btn-secondary">
-                    Registrarse
-                </Link>
-            </div>
-            ) : ( // Si no está autenticado, se muestran los botones de "Iniciar sesión" y "Registrarse".
-                <div className="navbar-buttons">
-                    <Link to="/login" className="btn btn-secondary">
+                    <Link to="/login" className="btn btn-secondary" id="button3">
                         Iniciar sesión
                     </Link>
-                    <Link to="/signUp" className="btn btn-secondary">
+                    <Link to="/signUp" className="btn btn-secondary" id="button3">
                         Registrarse
                     </Link>
                 </div>

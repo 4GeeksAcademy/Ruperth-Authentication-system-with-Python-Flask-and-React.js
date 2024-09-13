@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import { Context } from "../store/appContext";
+import "../../styles/signUp.css"; // Asegúrate de tener este archivo CSS
 
 export const SignUp = () => {
     const { store, actions } = useContext(Context);
@@ -40,10 +41,10 @@ export const SignUp = () => {
 
     return (
         <div>
-            <form className="container d-flex flex-column align-items-center mt-5 p-3" id="formularioRegistro" onSubmit={handleSubmit}>
+            <form className="container d-flex flex-column align-items-center mt-5 p-3" id="formularioRegistro" onSubmit={handleSubmit} id="signUpBox">
                 <h4 className="mt-2 mb-4"><b>Regístrate</b></h4>
                 <label>Email
-                    <input className="form-control" name="email" value={dataForm.email} placeholder="Correo electrónico" onChange={handleChange} type="text" />
+                    <input className="form-control" name="email" value={dataForm.email} placeholder="Correo electrónico" onChange={handleChange} type="text" id="emailForm"/>
                 </label>
                 <label>Contraseña
                     <div className="contenedor-password2">
@@ -67,7 +68,7 @@ export const SignUp = () => {
                 <div className="form-check">
 
                 </div>
-                <input className="btn btn-secondary mt-3" value="Regístrate" type="submit" />
+                <input className="btn btn-secondary mt-3" value="SignUp" type="submit" id="button4"/>
             </form>
         </div>
     );

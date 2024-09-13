@@ -1,6 +1,7 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
+import "../../styles/login.css"; // Asegúrate de tener este archivo CSS
 
 export const Login = () => {
     const { store, actions } = useContext(Context);
@@ -49,21 +50,21 @@ export const Login = () => {
     };
 
     return (
-        <div>
+        <div className="divPrincipalLogin">
             <form className="container d-flex flex-column align-items-center mt-5 p-3" id="formularioLogin" onSubmit={handleSubmit} autoComplete="off">
-                <h4 className="mt-2 mb-4"><b>Inicia sesión</b></h4>
-                <label>Email
+            <h4 className="mt-2 mb-4"><b>Inicia sesión</b></h4>
+            <label id="email2">Email<br></br>
                     <input
-                        className="form-control"
-                        name="email"
-                        value={dataForm.email}
-                        placeholder="Correo electrónico"
-                        onChange={handleChange}
-                        type="email"
-                        required
-                        autoComplete="off"
-                    />
-                </label>
+                    className="form-control"
+                    name="email"
+                    value={dataForm.email}
+                    placeholder="Correo electrónico"
+                    onChange={handleChange}
+                    type="email"
+                    required
+                    autoComplete="off"
+                />
+            </label>
                 <label>Contraseña
                     <div className="contenedor-password">
                         <input
@@ -84,9 +85,11 @@ export const Login = () => {
                     </div>
                 </label>
                 <input
+                    
                     className="btn btn-secondary mt-3"
                     value="Iniciar sesión"
                     type="submit"
+                    id="button4"
                     disabled={loading}
                     ref={submitButtonRef}
                 />

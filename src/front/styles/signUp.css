@@ -1,0 +1,47 @@
+#signUpBox {
+    background-color: aliceblue;
+    width: 600px;
+    height: 420px;
+    border-radius: 3%; /* Esquinas redondeadas */
+    border: 4px solid #000; /* Línea de borde de 2 píxeles de grosor, color negro */
+}
+
+
+.contenedor-password2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px; /* Ajusta el margen según sea necesario */
+
+}
+
+.contenedor-password2 input {
+    width: 100%; /* Asegúrate de que el input ocupe todo el ancho del contenedor */
+    padding-right: 30px; /* Espacio suficiente para el ícono */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+.contenedor-password2 .icon, .contenedor-password2 .icon2 {
+    position: absolute;
+    right: 10px; /* Ajusta la posición del ícono según sea necesario */
+    font-size: 16px; /* Tamaño del ícono */
+    color: #888; /* Color del ícono */
+}
+.form-control {
+    width: 100%;
+
+    box-sizing: border-box; /* Incluye el padding y el border en el cálculo del width */
+   
+}
+
+#emailForm{
+    width: 226px;
+    margin-bottom: 10px;
+}
+#button4{
+
+    color: black;
+    background-color:  rgb(189, 154, 206);
+    
+    margin-right: 10px;
+}
